@@ -1,0 +1,15 @@
+/* Copy the below into your main applications, Styles.css or the applicable Stylesheet*/
+
+
+/* Start of JSCalc Styles */
+
+.calcform{
+  max-width: 450px;
+  margin-top: 25px;
+}
+
+.calcresult{
+  margin-top: 50px;
+}
+
+/* End of JSCalc Styles */
