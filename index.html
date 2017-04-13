@@ -1,0 +1,66 @@
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style>
+
+.calcform{
+  max-width: 450px;
+  margin-top: 25px;
+}
+
+.calcresult{
+  margin-top: 50px;
+}
+
+</style>
+
+<script>
+
+function Calculate()
+{
+  var money = 25
+  var monthdays = 31
+  var num = document.getElementById('Qty').value;
+  var dailyresult = num * money;
+  var monthlyresult = num * money * monthdays
+  document.getElementById('daily').value = ("$") + dailyresult;
+  document.getElementById('monthly').value = ("$") + monthlyresult;
+  // document.form1.submit();
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container calcform">
+
+<form>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Number of E-Mails You Can Process Daily? </label>
+    <input type='text' class="form-control" id="Qty" placeholder="Enter Qty">
+    <!-- <small id="emailHelp" class="form-text text-muted">Some Helper Text Here</small> -->
+  </div>
+
+  <div class="form-group">
+  <button type="button" onClick="Calculate();" value="calculate" class="form-control btn btn-primary">Update</button>
+  </div>
+
+  <div class="form-group calcresult">
+    <label for="daily">Daily Income:</label>
+    <input type='text' class="form-control" disabled="disabled" id='daily' name='ans1' />
+  </div>
+
+  <div class="form-group">
+    <label for="monthly">Monthly Income:</label>
+    <input type='text' class="form-control" disabled="disabled" id='monthly' name='ans2' />
+  </div>
+
+
+</form>
+
+</div>
+
+</body>
